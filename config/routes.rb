@@ -1,7 +1,7 @@
 Bloccit::Application.routes.draw do
-  get "welcome/index"
+  resources :posts
 
-  get "welcome/about"
+  match "about" => 'welcome#about', via :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
